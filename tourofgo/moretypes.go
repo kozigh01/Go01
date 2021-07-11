@@ -9,11 +9,39 @@ type Vertex struct {
 
 func MoreTypes() {
 	pointers1()
+	
+	println()
 	struct1()
+
+	println()
 	struct2()
+
+	println()
 	struct3()
+
+	println()
 	arrays1()
+
+	println()
 	slices1()
+
+	println()
+	slices2()
+
+	println()
+	slices3()
+
+	println()
+	slices4()
+
+	println()
+	slices5()
+
+	println()
+	slices6()
+
+	println()
+	slices7()
 }
 
 func pointers1() {
@@ -67,5 +95,132 @@ func slices1() {
 }
 
 func slices2() {
+	names := [4]string{
+		"John",
+		"Paul",
+		"George",
+		"Ringo",
+	}
+	fmt.Println(names)
+
+	a := names[0:2]
+	b := names[1:3]
+	fmt.Println(a, b)
+
+	b[0] = "xxxxx"
+	fmt.Printf("%q; %q; %q\n", names, a, b)
+}
+
+func slices3() {
+	// slice literal - creates underlying array
+	q := []int{2, 3, 5, 7, 11, 13}
+	fmt.Println(q)
+
+	r := []bool{true, false, true, true, false, true}
+	fmt.Println(r)
+
+	s := []struct { 
+		i int 
+		b bool 
+	}{
+		{2, true},
+		{3, false},
+		{5, true},
+		{7, true},
+		{11, false},
+		{13, true},
+	}
+	fmt.Println(s)
+}
+
+func slices4() {
+	a := [6]int{2, 3, 5, 7, 11, 13}
+	s := []int{2, 3, 5, 7, 11, 13}
+
+
+	s = s[:]
+	fmt.Println(s, a[:])
+
+	s = s[1:4]
+	fmt.Println(s, a[1:4])
+
+	s = s[:2]
+	fmt.Println(s, a[:2])
+
+	s = s[1:]
+	fmt.Println(s, a[1:])
+}
+
+func slices5() {
+	s := []int{2, 3, 5, 7, 11, 13}
+
+	s = s[:0]
+	printSlice5(s)
+
+	s = s[:4]
+	printSlice5(s)
+
+	s = s[2:]
+	printSlice5(s)
+
+	s = s[:4]
+	printSlice5(s)
+
+	// s = s[:5]  // compiler error, since at this point, the capacity of the slice is only 4
+	// printSlice(s)
+}
+func printSlice5(s []int) {
+	fmt.Printf("len=%d, cap=%d, %v\n", len(s), cap(s), s)
+}
+
+func slices6() {
+	var s []int // zero value of slice is nil
+	fmt.Println(s, len(s), cap(s))
+	if s == nil {
+		fmt.Println("nil!")
+	}
+}
+
+func slices7() {
+	a := make([]int, 5)
+	printSlice7("a", a)
+
+	b := make([]int, 0, 5)
+	printSlice7("b", b)
+
+	b1 := append(b, 1)
+	printSlice7("b1", b1)
+
+	b2 := append(b1, 2, 3, 4, 5)
+	printSlice7("b", b)
+	printSlice7("b1", b1)
+	printSlice7("b2", b2)
 	
+	b3 := append(b2, 6)
+	printSlice7("b3", b3)
+
+	b2[2] = 33
+	printSlice7("b", b)
+	printSlice7("b1", b1)
+	printSlice7("b2", b2)
+	printSlice7("b3", b3)
+
+	b2[2] = 3
+	b3[2] = 33
+	printSlice7("b", b)
+	printSlice7("b1", b1)
+	printSlice7("b2", b2)
+	printSlice7("b3", b3)
+
+	b1[0] = 11
+	printSlice7("b", b)
+	printSlice7("b1", b1)
+	printSlice7("b2", b2)
+	printSlice7("b3", b3)
+
+	c := b[:2]
+	printSlice7("c", c)
+}
+func printSlice7(s string, x []int) {
+	fmt.Printf("%s: len=%d, cap=%d, %v\n", s, len(x), cap(x), x)
 }
