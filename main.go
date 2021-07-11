@@ -2,13 +2,23 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"time"
 
+	"github.com/google/go-cmp/cmp"
 	"github.com/kozigh01/go01/mascot"
+	"github.com/kozigh01/go01/tourofgo"
 	"rsc.io/quote"
 )
 
 func main() {
-	fmt.Println("Hello, world!")
+	fmt.Printf("Hello, world! (time: %s)\n", time.Now())
 	fmt.Println(mascot.BestMascot())
 	fmt.Println(quote.Go())
+	fmt.Println(cmp.Diff("Hello world", "Hello Go"))
+	fmt.Println("My favorite number is", rand.Intn(10))
+
+	// tourofgo.Basics()
+	fmt.Println("\n-------------------------------------\n")
+	tourofgo.FlowOfControl()
 }

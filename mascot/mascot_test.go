@@ -8,6 +8,6 @@ import (
 
 func TestMascot(t *testing.T) {
 	if mascot.BestMascot() != "Go Gopher" {
-		t.Fatal("wrong mascot :(")
+		t.Fatalf("wrong mascot :( - expected '%s' but got '%s'", "Go Gopher", mascot.BestMascot())
 	}
 }
