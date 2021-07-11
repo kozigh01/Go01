@@ -19,6 +19,8 @@ func main() {
 	fmt.Println("My favorite number is", rand.Intn(10))
 
 	// tourofgo.Basics()
+	// fmt.Println("\n-------------------------------------\n")
+	// tourofgo.FlowOfControl()
 	fmt.Println("\n-------------------------------------\n")
-	tourofgo.FlowOfControl()
+	tourofgo.MoreTypes()
 }
