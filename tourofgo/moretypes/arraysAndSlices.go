@@ -3,6 +3,7 @@ package moretypes
 import (
 	"fmt"
 	"strings"
+	"golang.org/x/tour/pic"
 )
 
 func arrays1() {
@@ -204,4 +205,24 @@ func slices10() {
 		fmt.Printf("%d ", v)
 	}
 	fmt.Println()
+}
+
+func slices11() {
+	// To see pic - need to run in https://play.golang.org/ 
+	pic.Show(Pic)
+}
+func Pic(dx, dy int) [][]uint8 {
+	var pic [][]uint8 = make([][]uint8, dx)
+	
+	for i := 0; i < dx; i++ {
+		pic[i] = make([]uint8, dy)
+		
+		for j := 0; j < dy; j++ {			
+			pic[i][j] = uint8((i + j) / 2)
+			// pic[i][j] = uint8(i + j)
+			// pic[i][j] = uint8(i ^ j)
+		}
+	}
+	
+	return pic	
 }

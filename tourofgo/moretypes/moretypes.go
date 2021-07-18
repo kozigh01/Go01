@@ -10,24 +10,20 @@ func printHeader(header string) {
 func MoreTypes() {
 	// pointers
 	// printHeader("pointers")
-	// pointers1()
+	// printSection(pointers1, "pointers")
 	
 	// structs
 	// printHeader("structs")
-	// struct1()
-
-	// println()
-	// struct2()
-
-	// println()
-	// struct3()
+	// printSection(struct1, "stucts1()")
+	// printSection(struct2, "stucts2()")
+	// printSection(struct3, "stucts3()")
 
 	// arrays
 	// printHeader("arrays")
-	// arrays1()
+	// printSection(arrays1, "arrays1()")
 
 	// slices
-	printHeader("slices")
+	// printHeader("slices")
 	// printSection(slices1, "first slice")
 	// printSection(slices2, "basic slicing")
 	// printSection(slices3, "slices3()")
@@ -37,7 +33,13 @@ func MoreTypes() {
 	// printSection(slices7, "slices7()")
 	// printSection(slices8, "slices8(): slices of slices")
 	// printSection(slices9, "slices9(): appending to slices")
-	printSection(slices10, "slices10(): range of slice")
+	// printSection(slices10, "slices10(): range of slice")
+	// printSection(slices11, "slices11(): slices of slices example")
+
+	// maps
+	printHeader("maps")
+	// printSection(maps1, "maps1(): declare, initialize, map literal")
+	printSection(maps2, "maps2(): add, modify, delete")
 }
 
 func printSection(f func(), description string) {
