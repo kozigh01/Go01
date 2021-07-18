@@ -3,7 +3,7 @@ package mascot_test
 import (
 	"testing"
 
-	"github.com/kozigh01/go01/mascot"
+	"github.com/mkozigo/go01/mascot"
 )
 
 func TestMascot(t *testing.T) {
