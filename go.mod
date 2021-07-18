@@ -1,4 +1,4 @@
-module github.com/kozigh01/go01
+module github.com/mkozigo/go01
 
 go 1.16
 

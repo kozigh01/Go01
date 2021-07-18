@@ -6,8 +6,11 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/kozigh01/go01/mascot"
-	"github.com/kozigh01/go01/tourofgo"
+	"github.com/mkozigo/go01/mascot"
+	// "github.com/mkozigo/go01/tourofgo"
+	"github.com/mkozigo/go01/tourofgo/moretypes"
+
+	// "github.com/mkozigo/go01/tourofgo/functions"
 	"rsc.io/quote"
 )
 
@@ -21,6 +24,10 @@ func main() {
 	// tourofgo.Basics()
 	// fmt.Println("\n-------------------------------------\n")
 	// tourofgo.FlowOfControl()
+	// fmt.Println("\n-------------------------------------\n")
+	// tourofgo.MoreTypes()
+	// fmt.Println("\n-------------------------------------\n")
+	// functions.Functions()
 	fmt.Println("\n-------------------------------------\n")
-	tourofgo.MoreTypes()
+	moretypes.MoreTypes()
 }
