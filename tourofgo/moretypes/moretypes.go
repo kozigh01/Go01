@@ -4,8 +4,6 @@ import (
 	"github.com/mkozigo/go01/shared/print"
 )
 
-
-
 func MoreTypes() {
 	// pointers
 	print.PrintHeader("pointers")

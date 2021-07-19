@@ -7,10 +7,11 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/mkozigo/go01/mascot"
-	// "github.com/mkozigo/go01/tourofgo"
-	"github.com/mkozigo/go01/tourofgo/moretypes"
-
+	myprint "github.com/mkozigo/go01/shared/print"
+	"github.com/mkozigo/go01/tourofgo/methods"
+	// "github.com/mkozigo/go01/tourofgo/moretypes"
 	// "github.com/mkozigo/go01/tourofgo/functions"
+
 	"rsc.io/quote"
 )
 
@@ -22,12 +23,19 @@ func main() {
 	fmt.Println("My favorite number is", rand.Intn(10))
 
 	// tourofgo.Basics()
-	// fmt.Println("\n-------------------------------------\n")
+
+	// myprint.PrintDivider()
 	// tourofgo.FlowOfControl()
-	// fmt.Println("\n-------------------------------------\n")
+	
+	// myprint.PrintDivider()
 	// tourofgo.MoreTypes()
-	// fmt.Println("\n-------------------------------------\n")
+	
+	// myprint.PrintDivider()
 	// functions.Functions()
-	fmt.Println("\n-------------------------------------\n")
-	moretypes.MoreTypes()
+	
+	// myprint.PrintDivider()
+	// moretypes.MoreTypes()
+	
+	myprint.PrintDivider()
+	methods.Methods()
 }

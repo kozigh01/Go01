@@ -2,6 +2,10 @@ package print
 
 import "fmt"
 
+func PrintDivider() {
+	fmt.Printf("\n-----------------------------------------------\n")
+}
+
 func PrintHeader(header string) {
 	fmt.Printf("\n------  %v  -----\n", header)
 }
