@@ -1,48 +1,50 @@
 package moretypes
 
-import "fmt"
+import (
+	"github.com/mkozigo/go01/shared/print"
+)
 
 
-func printHeader(header string) {
-	fmt.Printf("\n------  %v  -----\n", header)
-}
 
 func MoreTypes() {
 	// pointers
-	// printHeader("pointers")
-	// printSection(pointers1, "pointers")
+	print.PrintHeader("pointers")
+	print.PrintSection(pointers1, "pointers")
 	
 	// structs
-	// printHeader("structs")
-	// printSection(struct1, "stucts1()")
-	// printSection(struct2, "stucts2()")
-	// printSection(struct3, "stucts3()")
+	print.PrintHeader("structs")
+	print.PrintSection(struct1, "stucts1()")
+	print.PrintSection(struct2, "stucts2()")
+	print.PrintSection(struct3, "stucts3()")
 
 	// arrays
-	// printHeader("arrays")
-	// printSection(arrays1, "arrays1()")
+	print.PrintHeader("arrays")
+	print.PrintSection(arrays1, "arrays1()")
 
 	// slices
-	// printHeader("slices")
-	// printSection(slices1, "first slice")
-	// printSection(slices2, "basic slicing")
-	// printSection(slices3, "slices3()")
-	// printSection(slices4, "slices4()")
-	// printSection(slices5, "slices5()")
-	// printSection(slices6, "slices6()")
-	// printSection(slices7, "slices7()")
-	// printSection(slices8, "slices8(): slices of slices")
-	// printSection(slices9, "slices9(): appending to slices")
-	// printSection(slices10, "slices10(): range of slice")
-	// printSection(slices11, "slices11(): slices of slices example")
+	print.PrintHeader("slices")
+	print.PrintSection(slices1, "first slice")
+	print.PrintSection(slices2, "basic slicing")
+	print.PrintSection(slices3, "slices3()")
+	print.PrintSection(slices4, "slices4()")
+	print.PrintSection(slices5, "slices5()")
+	print.PrintSection(slices6, "slices6()")
+	print.PrintSection(slices7, "slices7()")
+	print.PrintSection(slices8, "slices8(): slices of slices")
+	print.PrintSection(slices9, "slices9(): appending to slices")
+	print.PrintSection(slices10, "slices10(): range of slice")
+	print.PrintSection(slices11, "slices11(): slices of slices example")
 
 	// maps
-	printHeader("maps")
-	// printSection(maps1, "maps1(): declare, initialize, map literal")
-	printSection(maps2, "maps2(): add, modify, delete")
+	print.PrintHeader("maps")
+	print.PrintSection(maps1, "maps1(): declare, initialize, map literal")
+	print.PrintSection(maps2, "maps2(): add, modify, delete")
+	print.PrintSection(maps3, "maps3(): maps exercise")
+
+	// functions
+	print.PrintHeader("functions")
+	print.PrintSection(funcs1, "funcs1(): functions as variables/parameters")
+	print.PrintSection(funcs2, "funcs2(): functions closures")
+	print.PrintSection(funcs3, "funcs3(): Fibonacci exercise")
 }
 
-func printSection(f func(), description string) {
-	fmt.Printf("\n-- %s\n", description)
-	f()
-}

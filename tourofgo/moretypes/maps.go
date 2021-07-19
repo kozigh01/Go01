@@ -1,6 +1,11 @@
 package moretypes
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+
+	"golang.org/x/tour/wc"
+) 
 
 type VertexMaps struct {
 	Lat, Long float64
@@ -40,4 +45,17 @@ func maps2() {
 
 	v, ok := m["Answer"]
 	fmt.Printf("Deleting (with existance check) - m[Answer]: %v, key exists: %v\n", v, ok)
+}
+
+func maps3() {
+	wc.Test(WordCount)
+}
+func WordCount(s string) map[string]int {
+	m := make(map[string]int)
+	
+	for _, w := range strings.Fields(s) {
+		fmt.Println(w)
+		m[string(w)]++
+	}
+	return m
 }
