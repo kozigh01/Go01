@@ -17,5 +17,5 @@ func methods3() {
 	
 	v = Vertex{3, 4}
 	Scale(&v, 10)
-	fmt.Printf("Scale(v, 10): %v\n", v)
+	fmt.Printf("v = %v: Scale(&v, 10) = %v\n", v, v)
 }
