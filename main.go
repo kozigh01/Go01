@@ -8,7 +8,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/mkozigo/go01/mascot"
 	myprint "github.com/mkozigo/go01/shared/print"
-	"github.com/mkozigo/go01/tourofgo/interfaces"
+	"github.com/mkozigo/go01/tourofgo/goroutines"
+	// "github.com/mkozigo/go01/tourofgo/interfaces"
 	// "github.com/mkozigo/go01/tourofgo/methods"
 	// "github.com/mkozigo/go01/tourofgo/moretypes"
 	// "github.com/mkozigo/go01/tourofgo/functions"
@@ -40,6 +41,9 @@ func main() {
 	// myprint.PrintDivider()
 	// methods.Methods()
 
+	// myprint.PrintDivider()
+	// interfaces.Interfaces()
+
 	myprint.PrintDivider()
-	interfaces.Interfaces()
+	goroutines.GoRoutines()
 }
