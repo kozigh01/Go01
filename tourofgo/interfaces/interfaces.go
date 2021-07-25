@@ -21,5 +21,6 @@ func Interfaces() {
 	// print.PrintSection(interfaces13, "error interface exercise")
 	// print.PrintSection(interfaces14, "reader interface")
 	// print.PrintSection(interfaces15, "reader interface exercise")
-	print.PrintSection(interfaces16, "reader interface exercise rot13Reader")
+	// print.PrintSection(interfaces16, "reader interface exercise rot13Reader")
+	print.PrintSection(interfaces17, "images interface")
 }
